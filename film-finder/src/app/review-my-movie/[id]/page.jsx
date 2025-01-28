@@ -40,7 +40,7 @@ function iterateArray(arr) {
 export const getUserInfo = async (e) => {
   try {
     //Sends request to /api/userinfo, will get the entire user object from the DB
-    const res = await fetch(`http://localhost:3000/api/userinfo?request=${e}`, { cache: "no-store" });
+    const res = await fetch(`https://film-finder-publish.vercel.app/api/userinfo?request=${e}`, { cache: "no-store" });
     if (!res.ok) {
       throw new Error("Could not get user");
     }
@@ -136,7 +136,7 @@ async function getReviewList(movieID) {
 const getReviewUsersList = async (movieID) => {
   try {
     //Will send a request to the route file located in /api/reviewMovieAPI, sends the movie ID as a parameter
-    const res = await fetch(`http://localhost:3000/api/reviewMovieAPI?id=${movieID}`, {
+    const res = await fetch(`https://film-finder-publish.vercel.app/api/reviewMovieAPI?id=${movieID}`, {
       cache: 'no-store',
     });
     if (!res.ok) {
@@ -154,7 +154,7 @@ const getReviewUsersList = async (movieID) => {
 const getReviewInfo = async (movieID, reviewsUserListEmail) => {
   try {
     //Sends a request to the route file in /api/reviewMovieAPI and sends both the movie ID and user emails as parameters
-    const res = await fetch(`http://localhost:3000/api/reviewMovieAPI?id=${movieID}&email=${reviewsUserListEmail}`, {
+    const res = await fetch(`https://film-finder-publish.vercel.app/api/reviewMovieAPI?id=${movieID}&email=${reviewsUserListEmail}`, {
       cache: 'no-store',
     });
 

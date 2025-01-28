@@ -39,7 +39,7 @@ const Edit = ({params}) => {
         const {id} = params;
         try {
             //Sends a request to the route file at /api/editfriend, passes a username and the user's email, and tries to add friend to the DB
-            const res = await fetch(`http://localhost:3000/api/editfriend/${id}`, {
+            const res = await fetch(`https://film-finder-publish.vercel.app/api/editfriend/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-type": "application/json",
@@ -69,7 +69,7 @@ const Edit = ({params}) => {
         const {id} = params;
         try {
             //Sends a request to the route file at /api/removefriend, sends friend's username and user's email, tries to remove friend from user friend list
-            const res = await fetch(`http://localhost:3000/api/removefriend/${id}`, {
+            const res = await fetch(`https://film-finder-publish.vercel.app/api/removefriend/${id}`, {
                 method: "DELETE",
                 headers: {
                     "Content-type": "application/json",

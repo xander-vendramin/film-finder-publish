@@ -9,7 +9,7 @@ export default function Results({ movieID }) {
         const getMovieInfo = async (movieID) => {
             try {
                 //console.log(`http://localhost:3000/api/recsAPI?id=${movieID}`)
-                const res = await fetch(`http://localhost:3000/api/recsAPI?id=${movieID}`, {
+                const res = await fetch(`https://film-finder-publish.vercel.app/api/recsAPI?id=${movieID}`, {
                     cache: 'no-store',
                 });
 

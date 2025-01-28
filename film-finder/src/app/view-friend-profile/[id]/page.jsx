@@ -27,7 +27,7 @@ a friend to the main user. This page allows the real user views their friend's p
 */
 const getUserInfo = async (e) => {
     try {
-        const res = await fetch(`http://localhost:3000/api/userinfo?request=${e}`, { cache: "no-store" });
+        const res = await fetch(`https://film-finder-publish.vercel.app/api/userinfo?request=${e}`, { cache: "no-store" });
         if (!res.ok) {
             throw new Error("Could not get user");
         }

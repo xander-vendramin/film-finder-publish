@@ -69,7 +69,7 @@ async function getMovieList(email) {
 const getUsersMovies = async (email) => {
   try {
     //Sends a request to the route file at /api/viewMoviesAPI, will return a list of all moviesthe user has watched
-    const res = await fetch(`http://localhost:3000/api/viewMoviesAPI?email=${email}`, {
+    const res = await fetch(`https://film-finder-publish.vercel.app/api/viewMoviesAPI?email=${email}`, {
       cache: 'no-store',
     });
     if (!res.ok) {
@@ -87,7 +87,7 @@ const getUsersMovies = async (email) => {
 export const getMovieInfo = async (userMovieListID) => {
   try {
     //Sends a request to the route file at /api/viewMoviesAPI, which will return the info of a movie
-    const res = await fetch(`http://localhost:3000/api/viewMoviesAPI?id=${userMovieListID}`, {
+    const res = await fetch(`https://film-finder-publish.vercel.app/api/viewMoviesAPI?id=${userMovieListID}`, {
       cache: 'no-store',
     });
     if (!res.ok) {

@@ -47,7 +47,7 @@ const Edit = ({ params }) => {
         const review = e.target[6].value;
         try {
             //Sends a request to the route file at /api/editreviews, passes a bunch of information that should either create or edit a review
-            const res = await fetch(`http://localhost:3000/api/editreview/${id}`, {
+            const res = await fetch(`https://film-finder-publish.vercel.app/api/editreview/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-type": "application/json",
@@ -72,7 +72,7 @@ const Edit = ({ params }) => {
         e.preventDefault();
         try {
             //Sends a request to the route file at /api/deletereview, passes the email of the poster and the movie id, should delete the review from the DB
-            const res = await fetch(`http://localhost:3000/api/deletereview/${id}`, {
+            const res = await fetch(`https://film-finder-publish.vercel.app/api/deletereview/${id}`, {
                 method: "DELETE",
                 headers: {
                     "Content-type": "application/json",

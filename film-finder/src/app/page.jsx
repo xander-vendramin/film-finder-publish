@@ -18,7 +18,7 @@ export default function Page() {
   const [data, setData] = useState([{}])
 
   useEffect(() => {
-    fetch("http://localhost:5000/plot_recommend").then(
+    fetch("https://film-finder-publish.vercel.app/plot_recommend").then(
       res => res.json()
     ).then(
       data => {

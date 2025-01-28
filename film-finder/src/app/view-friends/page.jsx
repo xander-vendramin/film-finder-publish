@@ -23,7 +23,7 @@ import { authOptions } from "@/app/api/auth/[...nextauth]/route.js"
 const getUserInfo = async (e) => {
   try {
     //Sends a request to the route file at /aip/userinfo, will return an object with all of the user info in it
-    const res = await fetch(`http://localhost:3000/api/userinfo?request=${e}`, { cache: "no-store" });
+    const res = await fetch(`https://film-finder-publish.vercel.app/api/userinfo?request=${e}`, { cache: "no-store" });
     if (!res.ok) {
       throw new Error("Could not get user");
     }
@@ -39,7 +39,7 @@ const getUserInfo = async (e) => {
 const getFriendInfo = async (e) => {
   try {
     //Sends a request to the route file at /aip/userinfo, will return an object with all of the friend's info in it
-    const res = await fetch(`http://localhost:3000/api/friendinfo?request=${e}`, { cache: "no-store" });
+    const res = await fetch(`https://film-finder-publish.vercel.app/api/friendinfo?request=${e}`, { cache: "no-store" });
     if (!res.ok) {
       throw new Error("Could not get user");
     }

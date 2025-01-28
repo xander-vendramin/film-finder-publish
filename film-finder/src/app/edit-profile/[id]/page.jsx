@@ -48,7 +48,7 @@ const Edit = ({params}) => {
         }
         try {
             //Sends a request to the route file at /api/editprofile/pfp, passes image link which is saved in database
-            const res = await fetch(`http://localhost:3000/api/editprofile/pfp/${id}`, {
+            const res = await fetch(`https://film-finder-publish.vercel.app/api/editprofile/pfp/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-type": "application/json",
@@ -79,7 +79,7 @@ const Edit = ({params}) => {
             return;
         }
         try {
-            const res = await fetch(`http://localhost:3000/api/editprofile/banner/${id}`, {
+            const res = await fetch(`https://film-finder-publish.vercel.app/api/editprofile/banner/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-type": "application/json",
@@ -104,7 +104,7 @@ const Edit = ({params}) => {
         const bio = e.target[0].value;
         const {id} = params;
         try {
-            const res = await fetch(`http://localhost:3000/api/editprofile/bio/${id}`, {
+            const res = await fetch(`https://film-finder-publish.vercel.app/api/editprofile/bio/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-type": "application/json",
@@ -129,7 +129,7 @@ const Edit = ({params}) => {
         const genres = e.target[0].value;
         const {id} = params;
         try {
-            const res = await fetch(`http://localhost:3000/api/editprofile/genres/${id}`, {
+            const res = await fetch(`https://film-finder-publish.vercel.app/api/editprofile/genres/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-type": "application/json",
@@ -158,7 +158,7 @@ const Edit = ({params}) => {
             return;
         }
         try {
-            const res = await fetch(`http://localhost:3000/api/editprofile/actor/${id}`, {
+            const res = await fetch(`https://film-finder-publish.vercel.app/api/editprofile/actor/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-type": "application/json",
@@ -188,7 +188,7 @@ const Edit = ({params}) => {
             return;
         }
         try {
-            const res = await fetch(`http://localhost:3000/api/editprofile/director/${id}`, {
+            const res = await fetch(`https://film-finder-publish.vercel.app/api/editprofile/director/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-type": "application/json",
@@ -218,7 +218,7 @@ const Edit = ({params}) => {
             return;
         }
         try {
-            const res = await fetch(`http://localhost:3000/api/editprofile/soundtrack/${id}`, {
+            const res = await fetch(`https://film-finder-publish.vercel.app/api/editprofile/soundtrack/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-type": "application/json",
@@ -247,7 +247,7 @@ const Edit = ({params}) => {
             return;
         }
         try {
-            const res = await fetch(`http://localhost:3000/api/editprofile/character/${id}`, {
+            const res = await fetch(`https://film-finder-publish.vercel.app/api/editprofile/character/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-type": "application/json",
@@ -272,7 +272,7 @@ const Edit = ({params}) => {
         const favmovie = e.target[0].value;
         const {id} = params;
         try {
-            const res = await fetch(`http://localhost:3000/api/editprofile/favmovie/${id}`, {
+            const res = await fetch(`https://film-finder-publish.vercel.app/api/editprofile/favmovie/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-type": "application/json",
