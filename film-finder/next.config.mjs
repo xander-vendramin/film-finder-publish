@@ -14,6 +14,19 @@ const nextConfig = {
       }
     ]
   }
+module.exports = () => {
+  const rewrites = () => {
+    return [
+      {
+        source: "/hello/:path*",
+        destination: "http://https://film-finder-publish.vercel.app/python/main/:path*",
+      },
+    ];
+  };
+  return {
+    rewrites,
+  };
+};
 };
 
 export default nextConfig;
