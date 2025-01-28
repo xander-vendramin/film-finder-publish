@@ -1,7 +1,7 @@
 "use client"
 import * as React from "react";
 import { useEffect, useState } from "react";
-import Logo from "./src/app/components/logo.js";
+import Logo from "./components/logo.js";
 import NavDrawer from "@/app/components/Drawer";
 import Carousel from "react-bootstrap/Carousel";
 
