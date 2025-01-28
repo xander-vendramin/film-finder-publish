@@ -14,7 +14,6 @@ const nextConfig = {
       }
     ]
   }
-module.exports = () => {
   const rewrites = () => {
     return [
       {
@@ -26,7 +25,6 @@ module.exports = () => {
   return {
     rewrites,
   };
-};
 };
 
 export default nextConfig;
