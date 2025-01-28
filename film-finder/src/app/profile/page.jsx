@@ -26,7 +26,7 @@ import { authOptions } from "@/app/api/auth/[...nextauth]/route.js"
 const getUserInfo = async (e) => {
     try {
         //Sends a request to the route file at /api/userinfo to get the user object from the database, sends an email as a parameter
-        const res = await fetch(`http://localhost:3000/api/userinfo?request=${e}`, { cache: "no-store" });
+        const res = await fetch(`http://localhost:5000/api/userinfo?request=${e}`, { cache: "no-store" });
         if (!res.ok) {
             throw new Error("Could not get user");
         }
