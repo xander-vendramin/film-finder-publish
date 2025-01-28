@@ -50,7 +50,7 @@ const Edit = ({params}) => {
             //Sends a request to the route file at /api/editprofile/pfp, passes image link which is saved in database
             const res = await fetch(`https://film-finder-publish.vercel.app/api/editprofile/pfp/${id}`, {
                 method: "PUT",
-                mode: "no-cors",
+                mode: "cors",
                 headers: {
                     "Content-type": "application/json",
                 },
