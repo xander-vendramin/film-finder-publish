@@ -17,11 +17,11 @@ const nextConfig = {
   rewrites: async () => {
     return [
       {
-        source: "/src/python/:path*",
+        source: '/api/python/:path*',
         destination:
-          process.env.NODE_ENV === "development"
-            ? "https://film-finder-publish.vercel.app/src/python/:path*"
-            : "/api/",
+          process.env.NODE_ENV === 'development'
+            ? 'http://127.0.0.1:5328/api/python/:path*'
+            : '/api/',
       },
  ];
   },
