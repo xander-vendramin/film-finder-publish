@@ -12,7 +12,7 @@ function SearchBar() {
         //console.log("search" + search)
 
             //              V await here    
-            const response = fetch("http://localhost:3000/enter-movie", {
+            const response = fetch("https://film-finder-publish.vercel.app/enter-movie", {
                 method: "POST",
                 headers: {
                     "Content-Type": "text/plain"
@@ -26,7 +26,7 @@ function SearchBar() {
         
         const searchMovie = async (search) => {
             try {
-                const res = await fetch(`http://localhost:3000/api/recsAPI?name=${search}`, {
+                const res = await fetch(`https://film-finder-publish.vercel.app/api/recsAPI?name=${search}`, {
                     cache: 'no-store',
                 });
 
