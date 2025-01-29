@@ -72,8 +72,6 @@ def plott(plot,movies):
 
 
 #app = Flask(__name__)
-CORS(app)
-
 
 
 @app.route("/plot_recommend/<search>")
