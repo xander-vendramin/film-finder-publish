@@ -41,7 +41,7 @@ export default function Page({ params }) {
     const [title, setTitle] = useState("");
 
     useEffect(() => {
-        fetch(`https://film-finder-publish.vercel.app/api/python/plot_recommend/${Plot}`).then(
+        fetch(`https://film-finder-publish.vercel.app/plot_recommend/${Plot}`).then(
             res => res.json()
         ).then(
             data => {
