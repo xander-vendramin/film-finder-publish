@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "homepage": "https://dastuomer.github.io/476-movie-recs",
   "private": true,
-  "proxy": "http://localhost:5000",
+  "proxy": "https://film-finder-publish.vercel.app",
   "scripts": {
     "flask-dev": "FLASK_DEBUG=1 pip3 install -r requirements.txt && python3 -m flask --app api/index run -p 5328",
     "next-dev": "next dev",

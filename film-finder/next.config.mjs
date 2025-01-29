@@ -14,6 +14,17 @@ const nextConfig = {
       }
     ]
   },
+  rewrites: async () => {
+    return [
+    {
+        source: '/api/python/:path*',
+        destination:
+        process.env.NODE_ENV === 'development'
+            ? 'https://film-finder-publish.vercel.app/api/python/:path*'
+            : '/api/python/',
+    },
+    ]
+},
 };
 
 export default nextConfig;
