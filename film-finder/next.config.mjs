@@ -13,18 +13,7 @@ const nextConfig = {
         ]
       }
     ]
-  },
-  rewrites: async () => {
-    return [
-    {
-        source: '/api/:path*',
-        destination:
-        process.env.NODE_ENV === 'development'
-            ? 'https://film-finder-publish.vercel.app/api/:path*'
-            : '/api/',
-    },
-    ]
-},
+  }
 };
 
 export default nextConfig;
