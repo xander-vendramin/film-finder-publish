@@ -5,7 +5,9 @@
   "private": true,
   "proxy": "http://localhost:5000",
   "scripts": {
-    "dev": "next dev",
+    "flask-dev": "FLASK_DEBUG=1 pip3 install -r requirements.txt && python3 -m flask --app api/index run -p 5328",
+    "next-dev": "next dev",
+    "dev": "concurrently \"pnpm run next-dev\" \"pnpm run flask-dev\"",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "next build",
@@ -28,7 +30,8 @@
     "react-bootstrap": "^2.10.1",
     "react-dom": "^18",
     "react-router": "^6.22.2",
-    "react-router-dom": "^6.22.2"
+    "react-router-dom": "^6.22.2",
+    "concurrently": "^8.0.1"
   },
   "devDependencies": {
     "@types/node": "20.11.24",

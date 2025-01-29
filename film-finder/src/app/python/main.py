@@ -18,8 +18,6 @@ client = MongoClient('mongodb+srv://476team:FilmFinder!!@filmfinder.sjnushj.mong
 db = client['test'] 
 collection = db['films']
 
-
-
 try:
     db.command('ismaster')
     print("Connected successfully to MongoDB Atlas")
