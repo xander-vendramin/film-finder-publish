@@ -22,6 +22,7 @@ class handler(BaseHTTPRequestHandler):
 
 #building the app 
 app = Flask(__name__)
+CORS(app)
 app.secret_key = 'your_secret_key'
 # Set up MongoDB connection 
 client = MongoClient('mongodb+srv://476team:FilmFinder!!@filmfinder.sjnushj.mongodb.net/?retryWrites=true&w=majority&appName=FilmFinder') 
